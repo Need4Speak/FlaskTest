@@ -125,3 +125,12 @@ dmypy.json
 # Pyre type checker
 .pyre/
 
+.idea/.gitignore
+.idea/FlaskTest.iml
+.idea/inspectionProfiles/
+.idea/jsLibraryMappings.xml
+.idea/misc.xml
+.idea/modules.xml
+.idea/vcs.xml
+
+
