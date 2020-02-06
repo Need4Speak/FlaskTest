@@ -2,14 +2,14 @@
 # -*- coding: UTF-8 -*-
 import time
 import random
-from flask import Blueprint
+from flask import Blueprint, render_template
 from response import Response
 
 login_bp = Blueprint('login', __name__, url_prefix='/login')
 
 
 @login_bp.route('info')
-def login_info():
+def info():
     response = Response(data={
         'time': int(time.time()),
         'count_list': [
@@ -18,3 +18,8 @@ def login_info():
         ]
     })
     return response.to_json()
+
+
+@login_bp.route('login_info')
+def login_info():
+    return render_template('login_info.html')

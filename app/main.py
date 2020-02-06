@@ -3,10 +3,11 @@
 
 from flask import Flask, redirect, url_for, render_template
 from flask_cors import CORS
-from controller import login_controller
+from controller import login_controller, sys_controller
 
 app = Flask(__name__)
 app.register_blueprint(login_controller.login_bp)
+app.register_blueprint(sys_controller.sys_bp)
 CORS(app, supports_credentials=True)
 
 
